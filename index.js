@@ -12,6 +12,8 @@ app.listen(PORT, () => {
 
 const uri = process.env.MONGO_URI;
 
+console.log("mongo uri", uri);
+
 // MongoDB Atlas connection
 mongoose
   .connect(uri)
