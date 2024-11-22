@@ -12,8 +12,6 @@ app.listen(PORT, () => {
 
 const uri = process.env.MONGO_URI;
 
-console.log("MongoDB URI:", uri);
-
 // MongoDB Atlas connection
 mongoose
   .connect(uri)
@@ -45,7 +43,7 @@ app.get("/about", async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: "Error querying about page", error });
   }
-});
+}); 
 
 // Export the Express API
 module.exports = app;
